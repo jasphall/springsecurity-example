@@ -30,7 +30,7 @@ public class MyUserDetailsService implements UserDetailsService {
         boolean accountNonLocked = true;
 
         if (user == null) {
-            throw new RuntimeException("No user with given email.");
+            throw new UsernameNotFoundException("No user with given email.");
         }
 
         System.out.println("User znaleziony: " + user.getEmail());

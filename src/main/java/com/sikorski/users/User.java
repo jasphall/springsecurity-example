@@ -23,7 +23,7 @@ public class User {
 
     private String email;
 
-    @Column(length = 60)
+    @Column(length = 300)
     private String password;
 
     private boolean enabled;
