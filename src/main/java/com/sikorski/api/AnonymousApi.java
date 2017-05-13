@@ -1,4 +1,4 @@
-package com.sikorski;
+package com.sikorski.api;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

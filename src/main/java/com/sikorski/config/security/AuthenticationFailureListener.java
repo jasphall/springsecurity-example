@@ -1,4 +1,4 @@
-package com.sikorski.security;
+package com.sikorski.config.security;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AuthenticationFailureBadCredentialsEvent;

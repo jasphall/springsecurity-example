@@ -1,4 +1,4 @@
-package com.sikorski;
+package com.sikorski.config.facebook;
 
 import com.sikorski.users.User;
 import com.sikorski.users.UserDTO;
@@ -9,11 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.social.facebook.api.Facebook;
-import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
-import java.util.Random;
 
 @Component
 public class FacebookConnectionSignup implements ConnectionSignUp {

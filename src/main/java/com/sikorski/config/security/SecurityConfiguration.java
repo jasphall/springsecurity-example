@@ -1,5 +1,7 @@
-package com.sikorski;
+package com.sikorski.config.security;
 
+import com.sikorski.config.facebook.FacebookConnectionSignup;
+import com.sikorski.config.facebook.FacebookSignInAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

@@ -1,4 +1,4 @@
-package com.sikorski.security;
+package com.sikorski.config.security;
 
 import com.sikorski.users.Role;
 import com.sikorski.users.User;

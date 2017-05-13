@@ -1,4 +1,4 @@
-package com.sikorski;
+package com.sikorski.api;
 
 import com.sikorski.users.User;
 import com.sikorski.users.UserDTO;
