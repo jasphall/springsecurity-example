@@ -41,7 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                     .antMatchers("/resources/**")
                         .permitAll()
-                    .antMatchers("/api/anonymous")
+                    .antMatchers("/api/anonymous", "/custom_form.html")
                         .permitAll()
                     .antMatchers("/api/user")
                         .hasRole("USER")
