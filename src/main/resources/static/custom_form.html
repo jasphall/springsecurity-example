@@ -116,6 +116,14 @@
             <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
     </div>
+    <br/>
+    <br/>
+    <div class="col-sm-12">
+        <form action="/signin/facebook" method="POST">
+            <input type="hidden" name="scope" value="public_profile, email" />
+            <input type="submit" value="Login using Facebook" class="btn btn-primary" />
+        </form>
+    </div>
 </div>
 </body>
 </html>
