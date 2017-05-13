@@ -124,6 +124,12 @@
             <input type="submit" value="Login using Facebook" class="btn btn-primary" />
         </form>
     </div>
+    <div class="col-sm-12">
+        <form action="/signin/google" method="POST">
+            <input type="hidden" name="scope" value="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email" />
+            <input type="submit" value="Login using Google" class="btn btn-primary" />
+        </form>
+    </div>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 package com.sikorski.config.security;
 
-import com.sikorski.config.facebook.FacebookConnectionSignup;
-import com.sikorski.config.facebook.FacebookSignInAdapter;
+import com.sikorski.config.social.SocialConnectionSignup;
+import com.sikorski.config.social.SocialSignInAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -35,7 +35,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private UsersConnectionRepository usersConnectionRepository;
 
     @Autowired
-    private FacebookConnectionSignup facebookConnectionSignup;
+    private SocialConnectionSignup facebookConnectionSignup;
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -55,7 +55,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new ProviderSignInController(
                 connectionFactoryLocator,
                 usersConnectionRepository,
-                new FacebookSignInAdapter());
+                new SocialSignInAdapter());
     }
 
     @Override
