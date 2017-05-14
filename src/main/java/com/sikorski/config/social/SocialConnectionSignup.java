@@ -10,7 +10,10 @@ import org.springframework.social.connect.Connection;
 import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.social.connect.UserProfile;
 import org.springframework.social.facebook.api.Facebook;
+import org.springframework.social.github.api.impl.GitHubTemplate;
 import org.springframework.stereotype.Component;
+
+import java.util.LinkedHashMap;
 
 @Component
 public class SocialConnectionSignup implements ConnectionSignUp {
@@ -43,6 +46,15 @@ public class SocialConnectionSignup implements ConnectionSignUp {
             firstname = userProfile.getFirstName();
             lastname = userProfile.getLastName();
             email = userProfile.getEmail();
+        }
+
+        if (connection.getKey().getProviderId().equals("github")) {
+            String token = connection.createData().getAccessToken();
+            GitHubTemplate githubTemplate = new GitHubTemplate(token);
+            LinkedHashMap<String, Object>[] emails = githubTemplate.getRestTemplate().getForObject("https://api.github.com/user/emails", LinkedHashMap[].class);
+            for (int i=0; i<emails.length; i++) {
+                System.out.println(emails[i]);
+            }
         }
 
         logger.info("Imię: {}.", firstname);

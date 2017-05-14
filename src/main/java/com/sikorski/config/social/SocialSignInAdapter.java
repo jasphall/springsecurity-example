@@ -31,6 +31,9 @@ public class SocialSignInAdapter implements SignInAdapter {
             case "google":
                 role = "GOOGLE_USER";
                 break;
+            case "github":
+                role = "GITHUB_USER";
+                break;
         }
 
         SecurityContextHolder.getContext().setAuthentication(
